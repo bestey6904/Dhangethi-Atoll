@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { GoogleGenAI, Modality, Type, LiveServerMessage } from '@google/genai';
 import { Room, RoomStatus, Staff } from '../types';
@@ -69,8 +68,14 @@ const VoiceAssistant: React.FC<VoiceAssistantProps> = ({ rooms, onBook, onUpdate
   };
 
   const startSession = async () => {
+    const apiKey = process.env.API_KEY;
+    if (!apiKey) {
+      alert("API Key not found. Please set it in Netlify Environment Variables.");
+      return;
+    }
+
     setIsConnecting(true);
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+    const ai = new GoogleGenAI({ apiKey });
 
     audioContextInRef.current = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 16000 });
     audioContextOutRef.current = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 24000 });
