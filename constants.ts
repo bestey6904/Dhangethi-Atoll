@@ -1,21 +1,16 @@
+
 import { RoomType, Room, Staff, RoomStatus } from './types';
 
 export const ROOMS: Room[] = [
-  // Twin Rooms
+  // Twin Rooms (Matches user's request)
   { id: '101', name: 'Room 101', type: RoomType.TWIN, status: RoomStatus.READY },
   { id: '102', name: 'Room 102', type: RoomType.TWIN, status: RoomStatus.READY },
   { id: '103', name: 'Room 103', type: RoomType.TWIN, status: RoomStatus.READY },
   { id: '202', name: 'Room 202', type: RoomType.TWIN, status: RoomStatus.READY },
   { id: '203', name: 'Room 203', type: RoomType.TWIN, status: RoomStatus.READY },
   { id: '204', name: 'Room 204', type: RoomType.TWIN, status: RoomStatus.READY },
-  // Double Bed Rooms
+  // Double Bed Rooms (Matches user's request)
   { id: '104', name: 'Room 104', type: RoomType.DOUBLE, status: RoomStatus.READY },
-  { id: '105', name: 'Room 105', type: RoomType.DOUBLE, status: RoomStatus.READY },
-  { id: '106', name: 'Room 106', type: RoomType.DOUBLE, status: RoomStatus.READY },
-  { id: '201', name: 'Room 201', type: RoomType.DOUBLE, status: RoomStatus.READY },
-  { id: '205', name: 'Room 205', type: RoomType.DOUBLE, status: RoomStatus.READY },
-  { id: '206', name: 'Room 206', type: RoomType.DOUBLE, status: RoomStatus.READY },
-  { id: '301', name: 'Room 301', type: RoomType.DOUBLE, status: RoomStatus.READY },
 ];
 
 export const STAFF: Staff[] = [
