@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Dhangethi Atoll Room Managementvdvd",
+  "description": "A professional room booking and management calendar for hotel staff at Dhangethi Atoll, featuring room status tracking and streamlined booking workflows.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
